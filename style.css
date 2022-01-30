@@ -1,0 +1,1364 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+
+button::-moz-focus-inner{padding: 0;
+border:0;}
+
+a,a:visited{text-decoration: none;}
+
+a:hover{text-decoration: none;}
+
+ul li{list-style: none;}
+
+img{vertical-align:top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+
+
+
+
+body{
+    font-family: Montserrat;
+    color:#252B42;
+    font-weight: 500;
+    background: #FAFAFA;    
+}
+
+
+
+
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container{
+    padding:0 15px;
+    max-width: 1046px;
+    margin:0 auto;
+    box-sizing: content-box;
+}
+
+
+/* ******Header************************************************* */
+
+.header_container{
+    display: flex;
+    align-items: center;
+    min-height: 104px;
+}
+
+.header_logo a{
+    color:#252B42;
+    font-size: 24px;
+}
+
+.header_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    z-index:30;
+}
+
+.header_menu{
+    margin-left:132px;
+}
+
+.menu{
+    padding:5px 0;
+}
+
+.header_list_item_link{
+    font-size: 14px;
+    line-height: calc(24/14*100%);
+    font-weight: 600;
+    color:#737373;
+}
+
+.header_list_item_link:hover{
+    color:black;
+    transition: 0.6s ease;
+}
+
+
+.header_list_item:not(:last-child){
+    margin-right: 21px;
+}
+
+
+
+@media (max-width:992px){
+    .header_menu{
+        margin-left:80px;
+    }
+}
+
+
+@media (max-width:767px){
+    .header_menu{
+        margin-left:60px;
+    }
+}
+
+
+@media (max-width:479px){
+    .header_menu{
+        margin-left:40px;
+    }
+
+    .header_list_item_link{
+        font-size: 18px;
+    }
+    .header_container{
+        min-height: 85px;
+    }
+
+}
+
+
+
+
+/* ******Main***************************************************** */
+.main{
+    flex: 1 1 auto;
+}
+.main_block{
+    position: relative;
+}
+
+
+._ibg{
+    position: relative;
+}
+
+._ibg img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.main_block_image{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main_body{
+    padding: 184px 0 193px 0;
+    position: relative;
+    z-index: 2;
+    max-width: 509px;
+}
+
+.main_title{
+    color:#252B42;
+    letter-spacing: 0.2px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 137%;
+}
+
+.main_block_text{
+    color: #737373;
+    letter-spacing: 0.2px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 400px;
+}
+
+.main_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 36px;
+    min-height: 48px;
+    border-radius: 37px;
+    color:#fff;
+    letter-spacing: 0.2px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 150%;
+    margin:10px 0;
+
+}
+
+.button_orange:hover{
+    background: #f8500e;
+    transition: 0.5s ease;
+}
+
+.main_body > *:not(:last-child){
+    margin-bottom: 35px;
+}
+
+
+
+
+/* используем отрицательние отсупи в мейн батонс и добавляем отступи отдельно кнопкам */
+
+.main_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+}
+
+/* именно цей флекс розширяє кнопки по всей ширине */
+@media (max-width:479px){
+    .main_button{
+        flex: 1 1 100%;
+    }
+}
+/* mobile first (точка старта) то есть на широких устройствах */
+@media (min-width:479px){
+    .main_button:not(:first-child){
+    margin-left: 10px;
+}
+}
+
+
+
+
+
+.button_orange{
+    background: #FF7B47;
+}
+
+.button_green_border{
+    border: 1px solid #0D5C63;
+    color: #0D5C63;
+}
+
+.button_green_border:hover{
+    background: #0D5C63;
+    color:#fff;
+    transition: 0.4s ease;
+}
+
+/* object-position к картинке для того, чтобы картинка показывалась полностью для пользователя */
+
+
+/* section services----------------------- */
+@media (max-width:1300px){
+    .main_block_image img{    
+        object-position: right;
+    }
+}
+
+@media (max-width:992px){
+    .main_block_image img{
+        opacity: 0.5;
+    }
+}
+
+@media (max-width:992px){
+    .main_body{
+        padding-top:120px;
+    }
+}
+
+@media (max-width:479px){
+    .main_title{
+        font-size: 42px;
+    }
+}
+/* ОЧЕНЬ ВАЖНО! ЕСТЬ FLEX-ЭЛЕМЕНТЫ ТАКИЕ КАК ITEM_COLUMN И ЕСТЬ БЛОКИ main_services_column, ВНУТРИ ЭТИХ ЭЛЕМЕНТОВ И МЫ ЭТИМ БЛОКАМ ЗАДАЕМ ВЫСОТУ 100%, А САМИМ FLEX-ЭЛЕМЕНТАМ ДАЕМ FLEX 1 1 33.333% ДЛЯ ТОГО ЧТОБЫ ОНИ РАЗМЕСТИЛИСЬ КРАСИВО В РЯД С ШИРИНОЙ ПО 33.333%. ТАК ЖЕ МЫ FLEX-КОНТЕЙНЕРУ ДЕЛАЕМ ОТРИЦАТЕЛЬНЫЙ ОТСТУП И ПАДИНГОМ ДОБАВЛЯЕМ ТЕ ЖЕ ЗНАЧЕНИЯ В FLEX-ЭЛЕМЕНТАХ ТО ЕСТЬ В ITEM_COLUMN. ЭТО ДЕЛАЕТСЯ ДЛЯ РАВНОМЕРНОГО ОСТУПА МЕЖДУ FLEX=ЭЛЕМЕНТАМИ */
+
+.main_services_column{
+    height: 100%;
+    background-color: #fff;
+    padding:40px;
+    box-shadow: 0 13px 19px rgba(0,0,0,0.07);
+}
+
+.main_services_column > *:not(:last-child){
+    margin-bottom: 10px;
+}
+
+/* -------------- */
+
+/* FLEX-КОНТЕЙНЕРУ ТО ЕСТЬ MAIN_SERVICES ДЕЛАЕМ ОТРИЦАТЕЛЬНЫЙ ОТСТУП */
+.main_services{
+    display: flex;
+    margin:0 -15px -30px;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* ПАДИНГОМ ДОБАВЛЯЕМ ТЕ ЖЕ ЗНАЧЕНИЯ В FLEX-ЭЛЕМЕНТАХ ТО ЕСТЬ В ITEM_COLUMN */
+
+.item_column{
+    flex: 0 1 33.333%;
+    padding:0 15px;
+    margin: 0 0 30px 0;
+}
+
+/* -------------- */
+
+
+@media (max-width:992px) {
+    .item_column{
+        flex: 0 1 50%;
+        margin-bottom: 30px;
+    }
+    .item_column:last-child{
+        flex: 0 1 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width:670px) {
+    .item_column{
+        flex: 1 1 50%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+.main_body{
+   /* padding-bottom: 180px; */
+}
+
+.services_title{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 133%;
+letter-spacing: 0.1px;
+}
+
+.services_text{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 143%;
+
+
+letter-spacing: 0.2px;
+
+
+color: #737373;
+}
+
+.service_column_green{
+    background-color: #0D5C63;
+    color:#fff;
+}
+
+.services_text_white{
+    color:#fff;
+}
+
+
+.services_section{
+    margin-top: -111px;
+    position: relative;
+    z-index: 2;
+}
+
+/* section experience----------------------------- */
+.exp_title{
+    text-align: center;
+    color: #252B42;
+    letter-spacing: 0.2px;
+    line-height: 142%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.exp_subtitle{
+    color: #737373;
+    letter-spacing: 0.2px;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    max-width: 511px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+
+.header_bem_block{
+    margin-bottom: 80px;
+}
+
+.experience_section{
+    text-align: center;
+    padding:80px 0;
+}
+
+
+.experience_value{
+    color: #252B42;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 142%;
+    letter-spacing: 0.2px;
+
+}
+
+.experience_item > *:not(:last-child){
+    margin-bottom: 10px;
+}
+
+/* Иконки по высоте разные, поэтому чтобы ровные отступы были мы для каждой из них вказываем высоту и флекс и выравнивание по горизонтали и вертикали */
+.experience_icon{
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.experience_body{
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+}
+.experience_column{
+    flex: 0 1 25%;
+    padding: 0 15px;
+}
+
+.experience_item{
+    padding:30px;
+    background-color: #fff;
+}
+
+.experience_text{
+    color: #737373;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1px;
+}
+
+
+@media (max-width:1020px){
+    .experience_column{
+        flex: 0 1 50%;
+    }
+    .experience_column{
+     margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width:550px){
+    .experience_column{
+        flex: 0 1 100%;
+    }
+}
+
+@media (max-width:992px){
+    .experience_section{
+        padding:40px 0 30px 0;
+    }
+    .header_bem_block{
+        margin-bottom: 30px;
+    }
+    ._pra{
+        margin-top: -30px;
+    }
+}
+/* section practice------------------------ */
+.practice{
+    padding: 125px 0 80px 0;
+}
+
+@media (max-width: 992px){
+    .practice{
+        padding: 20px 0 50px 0;
+    }
+
+}
+
+@media (max-width: 631px){
+    .practice{
+        padding: 15px 0 50px 0;
+    }
+}
+
+
+/* @media (max-width:1000px){
+    .experience_column{
+        flex: 0 1 50%;
+    }
+} */
+
+
+
+
+
+.practice_link{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 150%;
+
+letter-spacing: 0.1px;
+
+
+
+color: #252B42;
+}
+
+.practice_text{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 143%;
+
+letter-spacing: 0.2px;
+
+/* second-text-color */
+
+color: #737373;
+}
+
+
+
+
+.practice_column{
+    flex: 0 1 25%;
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+}
+
+
+
+
+/* Очень важно ибо разная высота текста поэтому мы ставим флекс 1 1 авто для контент-бокса а для айтема, который есть родителем этого практис-контент мы ставим высота 100% дисплей флекс и направление в колонку */
+.practice_content{
+    padding: 30px;
+    background-color: #fff;
+    flex: 1 1 auto;
+}
+
+.practice_item{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.practice_body{
+    display: flex;
+    margin: 0 -15px -30px;
+    flex-wrap: wrap;
+}
+
+.practice_content > *:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.practice_text{
+    /* margin-bottom: 50px; */
+}
+
+/* мы использовати модификато _ibg и поэтому можем отобразить картинку падингом который вычисляеться как высота/ширина * 100% */
+
+.practice_img {
+    padding: 0 0 60% 0;
+}
+
+@media (max-width:1020px){
+    .practice_column{
+        flex: 0 1 50%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width:630px){
+    .practice_column{
+        flex: 0 1 100%;
+    }
+
+}
+
+
+/* section who ------------------------------------- */
+
+
+.who{
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+
+
+
+.who_content_title{
+    color: #252B42;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 142%;
+    letter-spacing: 0.2px;
+}
+
+.who_content_text{
+    color: #737373;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.2px;
+}
+
+.who_content_smalltitle{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+
+.who_content_smalltext{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 171%;
+letter-spacing: 0.2px;
+color: #737373;
+}
+._who{
+    margin-bottom: 100px;
+}
+
+.who_body{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+
+/* Вставка видео идет таким образом: сначало мы делаем флекс контейнер потом флекс-элементам даем свойство флекс. У видео оно стоит 0 0 57%(проценты высчитываются как ширина этого блока видео/ширина контейнера и *100%). Другому флекс-элементу мы задаем свойство флекс 1 1 auto, то есть он сам будет автоматически вычислять ширину. Для блока с видео мы ставим position:relative, а для самого видео position absolute и тд. Потом в этот relative блок мы внедряем падинг процентный вниз для отображения картинки, который равен высоте БЛОКА то есть родителя/ширина контейнера * 100%. */
+
+.who_video{
+    flex: 0 0 57%;
+    position: relative;
+    padding: 0 0 42.25% 0;
+}
+
+.who_content{
+    flex: 1 1 auto;
+}
+
+.who_video iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.who_content{
+    padding-left:120px;
+    padding-top:20px;
+}
+
+@media (max-width:1080px) {
+    .who_content{
+        padding-left:60px;
+        padding-top:0px;
+    }
+}
+
+@media (max-width:950px) {
+    .who{
+        padding: 50px 0 50px 0;
+    }
+    .who_content{
+        padding:0;
+    }
+    .who_body{
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+    .who_video{
+        padding: 0 0 56.25% 0;
+    }
+    .who_video:not(:last-child){
+        margin-top: 50px;
+    }
+    ._who{
+        margin-bottom: 30px;
+    }
+    .who_content_title{
+        font-size: 30px;
+    }
+}
+
+
+
+.who_content_title:not(:last-child){
+    margin-bottom: 10px;
+}
+
+
+/* походу идет по дивам это свойство */
+.who_top:not(:last-child){
+    margin-bottom: 50px;
+}
+
+.who_content_item{
+    display: flex;
+}
+
+.who_content_icon{
+    flex: 0 0 32px;
+}
+
+.who_content_body{
+    flex: 1 1 auto;
+    padding-left: 20px;
+}
+
+.who_content_body >*:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.who_content_item:not(:last-child){
+    margin-bottom: 30px;
+}
+
+@media (max-width:767px) {
+    .who{
+        padding-top: 20px;
+    }
+    .who_top:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .who_video:not(:last-child){
+        margin-top: 20px;
+    }
+}
+
+
+/* section clients */
+
+.clients{
+    padding:55px 0;
+}
+
+.clients_items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients_item{
+    padding: 8px 15px;
+    flex: 0 1 16.666%;
+    min-width: 140px;
+}
+
+.clients_item img{
+    max-width: 100%;
+}
+
+
+@media (max-width:605px) {
+    .clients{
+        padding: 25px 0;
+    }
+}
+
+/* section subscribe -------------*/
+
+
+.subscribe_title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height:133%;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    max-width: 266px;
+}
+
+.subscribe_form{
+    display: flex;
+    align-items: center;
+    flex: 0 1 50%;
+}
+
+.subscribe_body{
+    background: #17213C;
+    border-radius: 2px;
+    align-items: center;
+    padding: 30px 50px;
+
+}
+
+
+
+.subscribe_input{
+    flex: 1 1 auto;
+    min-height: 58px;
+    padding: 0 20px;
+    background: #F9F9F9;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px;
+    color:#737373;
+}
+/* при введении фокус отвечает за цвет */
+.subscribe_input:focus{
+    color:#000;
+}
+
+.subscribe_button{
+    background: #FF7B47;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 0px 5px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 58px;
+    color:#fff;
+    padding: 0 22px;
+}
+
+.subscribe_button:hover{
+    background: #f8500e;
+    transition: 0.2s ease;
+}
+
+/* для мобайл ферст мин видс делаем для боди флекс и спейс-битвин для вертикального хотя х3 почему так */
+
+@media (min-width:810px){
+    .subscribe_body{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
+
+@media (max-width:810px){
+    .subscribe_title{
+        margin-bottom: 20px;
+    }
+    .subscribe_body{
+        padding: 20px 25px;
+        margin: 0 -15px;
+    }
+}
+
+
+
+/* создание полоски снизу с помощью пресвоэлемента */
+
+.subscribe{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+.subscribe::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 77px;
+    background: #252B42;
+    z-index: -1;
+    left:0;
+}
+
+
+/* section touch----------------------- */
+
+._touch{
+    margin-top: 50px;
+}
+
+.touch{
+    padding-bottom: 135px;
+}
+
+.support_body{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+.support_item{
+    padding:50px 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.support_column{
+    flex: 0 1 35%;
+}
+
+
+
+.middle-item{
+    padding: 80px 40px;
+    background: #252B42;
+    color:#fff;
+}
+
+.support_column:nth-of-type(2){
+    flex: 0 1 30%;
+}
+
+
+.support_item >*:not(:last-child){
+    margin-bottom: 15px;
+}
+
+
+.support_email{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height:171%;
+    text-align: center;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.support_button{
+    border: 1px solid #FF7B47;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #FF7B47;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+.support_button:hover{
+    color:#fff;
+    background: #FF7B47;
+    transition: 0.2s ease;
+}
+
+.support_label{
+    color: #252B42;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+}
+
+.support_labelW{
+    color:#fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+}
+
+
+
+.support_buttonW{
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.support_buttonW:hover{
+    background:#fff;
+    color: #252B42;
+    transition: 0.2s ease;
+}
+
+
+
+
+@media (max-width:1050px) {
+    .support_column{
+        flex: 0 1 50%;
+        padding: 0 15px;
+    }
+    .support_column:nth-of-type(2){
+        flex: 0 1 50%;
+    }
+    .middle-item{
+        padding: 50px 40px;
+    }
+    .support_column:last-child{
+        flex: 0 1 100%;
+        margin-top: 30px;
+    }
+    .support_body{
+        margin: 0 -15px;
+    }
+} 
+
+
+@media (max-width:680px) {
+    .support_column{
+        flex: 0 1 100%;
+    }
+    .support_column:nth-of-type(2){
+        flex: 0 1 100%;
+    }
+    .support_column:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .support_column:last-child{
+        margin-top: 0;
+    }
+}
+
+
+
+/* section contact--------------------- */
+
+
+.contact_content{
+    margin-bottom: 20px;
+}
+
+.contact_content >*:not(:last-child){
+    margin-bottom: 10px;
+}
+
+@media (min-width:767px) {
+    .contact_body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact_content{
+    }
+}
+
+.contact_link{
+    background: #FF7B47;
+    border-radius: 5px;
+    padding: 5px 40px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 58px;
+}
+
+.contact_link:hover{
+    background: #f8500e;
+    transition: 0.2s ease;
+}
+
+.contact_title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+
+.contact_subtitle{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.contact_us{
+    background-color: #fff;
+    padding: 42px 0;
+}
+
+.contact_content{
+    padding-right: 20px;
+}
+
+
+
+
+
+/* *******Footer************************************************** */
+
+
+.footer_label{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.footer_top{
+    background: #17213C;
+    padding: 35px 0;
+}
+
+.footer_list_link{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+
+.footer_list_link:hover{
+    text-decoration: underline;
+}
+ 
+
+.footer_top_body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_column >*:first-child{
+    margin-bottom: 20px;
+}
+
+
+.footer_column{
+    flex: 0 1 16.666%;
+    padding: 15px 0px;
+}
+
+
+
+
+
+.footer_column:last-child{
+    flex: 0 1 32.334%;
+}
+
+
+
+@media (max-width:992px){
+    
+.footer_column{
+    flex: 0 1 25%;
+}
+.footer_column:last-child{
+    flex: 0 1 100%;
+}
+
+}
+
+@media (max-width:700px){
+    
+    .footer_column{
+        flex: 0 1 50%;
+    }
+    
+    }
+
+.footer_list >*:not(:last-child){
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* Вставляем иконки ссылкам футер топ через background-image задаем ноурепит а ссылкам дисплей флекс мин высота и вертикальное выравнивание */
+._phone{
+    background-image: url('/img/footer_top/01.svg');
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.footer_contacts_link{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height:142%;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    padding-left: 34px;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+
+}
+
+.footer_contacts_link:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.footer_contacts >*:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer_contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+._map{
+    background-image: url('/img/footer_top/02.svg');
+    background-repeat: no-repeat;
+}
+
+._send{
+    background-image: url('/img/footer_top/03.svg');
+    background-repeat: no-repeat;
+}
+
+.footer_bottom{
+    padding: 25px 0;
+}
+
+.footer_bottom_copyright{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height:171%;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+
+.footer_bootom_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_bottom_social{
+    display: flex;
+    align-items: center;
+}
+
+.social_item:not(:last-child){
+    margin-right: 20px;
+}
+
+@media (max-width:767px) {
+    .footer_bootom_body{
+        flex-direction: column;
+    }
+    .footer_bottom_copyright{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
